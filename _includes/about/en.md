@@ -1,12 +1,31 @@
-Hey, I am Huang, Xuan (a.k.a. _@huxpro_). I worked on the [React Team](https://beta.reactjs.org/community/meet-the-team#react-core) at <del>Facebook</del>Meta.
+Hi, I’m Sanya.
 
-I considered myself as a hybrid between a software engineer specifically into the programming languages theories and implementations domain (i.e. compiler, type system, type-based formal verification, virtual machine, runtime systems, garbage collection), and a creative technologiest deeply caring about many humanistic aspects (e.g. visual, sound, interaction) in UI and HCI in general.
+I work at the crossroads of art, design, and technology—crafting experiences that are as engaging as they are imaginative. From Indian myth-inspired game concepts to character art rich with narrative depth, I bring stories to life through bold visuals and thoughtful design.
 
-I also worked on the [Hermes JavaScript Engine](https://hermesengine.dev/), some other projects under the [Reality Labs (Research)](https://tech.fb.com/ar-vr/), and [ReasonML](https://reasonml.github.io/) (now [ReScript](https://rescript-lang.org/)) efforts at Meta (Facebook).
+My professional experience includes leading the creative direction and game design for Roop Ro Rajasthan, a narrative-driven virtual reality game; overseeing character conceptualization and creative direction for an upcoming multiplayer mobile title; and independently producing all graphic design deliverables for a TEDx event. 
 
-In the past, I worked on [Alitrip (Fliggy)](https://www.alitrip.com/) mobile and web apps under the [Alibaba Group](https://en.wikipedia.org/wiki/Alibaba_Group), found and lead front-end infrastructure team at an unicorn startup company [Beijing Weiying (a.k.a. WePiao, now acquired by Maoyan)](https://www.crunchbase.com/organization/beijing-weiying-technology), and helped [Ele.me (now acquired by Alibaba)](https://en.wikipedia.org/wiki/Ele.me) to upgrade their mobile web site into [the first influential PWA (progressive web app) in China](https://medium.com/elemefe/upgrading-ele-me-to-progressive-web-app-2a446832e509).
+Additionally, I have contributed to book illustrations, designed cover art for music releases, co-organized an art market during a campus event at IIT Jodhpur, and volunteered with the social media team at the School of Design, IIT Jodhpur.
 
-I studied BA, Digital Media Art at [Communication University of China](https://en.wikipedia.org/wiki/Communication_University_of_China) and MS, Computer Science (with a focus on programming languages, mainly supervised by [Prof. Matthew Fluet](https://www.cs.rit.edu/~mtf/)) at [Rochester Institute of Technology](https://en.wikipedia.org/wiki/Rochester_Institute_of_Technology).
+Education
+
+- Master of Design (M.Des) in XR Design, 2023
+School of Design, IIT Jodhpur
+Focus: Extended Reality (XR), immersive media, interactive experiences
+
+- Bachelor of Fine Arts (BFA), Applied art dept., 2019
+College of Art, University of Delhi
+Focus: Commercial Art and Advertising
+
+My skill set spans multiple domains
+- Game Design – Narrative design, level design, and gameplay mechanics
+- UI/UX Design – User-centered interfaces and interactive experiences
+- 3D Asset Creation – Modeling, texturing, and environment design
+- Concept Art & Illustration – Character design, world-building, and visual storytelling
+- Graphic Design – Branding, posters, and digital assets
+- Animation – 2D/3D animation for games and media
+- Vibe Coding
+
+Software Proficiency
 
 ##### Appearence
 
