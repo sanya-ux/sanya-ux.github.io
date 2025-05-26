@@ -1,18 +1,18 @@
-Hi, I’m Sanya.
+### Hi, I’m Sanya.
 
 I work at the crossroads of art, design, and technology—crafting experiences that are as engaging as they are imaginative. From Indian myth-inspired game concepts to character art rich with narrative depth, I bring stories to life through bold visuals and thoughtful design.
 
-My professional experience includes leading the creative direction and game design for Roop Ro Rajasthan, a narrative-driven virtual reality game; overseeing character conceptualization and creative direction for an upcoming multiplayer mobile title; and independently producing all graphic design deliverables for a TEDx event. 
+My professional experience includes leading the creative direction and game design for **Roop Ro Rajasthan, a narrative-driven virtual reality game;** overseeing character conceptualization and creative direction for an upcoming multiplayer mobile title; and independently producing all graphic design deliverables for a TEDx event. 
 
 Additionally, I have contributed to book illustrations, designed cover art for music releases, co-organized an art market during a campus event at IIT Jodhpur, and volunteered with the social media team at the School of Design, IIT Jodhpur.
 
-Education
+#### Education
 
-- Master of Design (M.Des) in XR Design, 2023
+- **Master of Design (M.Des) in XR Design**, 2023
 School of Design, IIT Jodhpur
 Focus: Extended Reality (XR), immersive media, interactive experiences
 
-- Bachelor of Fine Arts (BFA), Applied art dept., 2019
+- **Bachelor of Fine Arts (BFA)**, Applied art dept., 2019
 College of Art, University of Delhi
 Focus: Commercial Art and Advertising
 
@@ -26,6 +26,8 @@ My skill set spans multiple domains
 - Vibe Coding
 
 Software Proficiency
+
+![sfp](img/sfp.png)
 
 ##### Appearence
 
