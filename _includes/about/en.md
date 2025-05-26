@@ -8,12 +8,12 @@ Additionally, I have contributed to book illustrations, designed cover art for m
 
 #### Education
 
-- **Master of Design (M.Des) in XR Design**, 2023
-School of Design, IIT Jodhpur
+- **Master of Design (M.Des) in XR Design**, 2023  
+School of Design, IIT Jodhpur  
 Focus: Extended Reality (XR), immersive media, interactive experiences
 
-- **Bachelor of Fine Arts (BFA)**, Applied art dept., 2019
-College of Art, University of Delhi
+- **Bachelor of Fine Arts (BFA)**, Applied art dept., 2019  
+College of Art, University of Delhi  
 Focus: Commercial Art and Advertising
 
 My skill set spans multiple domains
