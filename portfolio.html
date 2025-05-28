@@ -1,0 +1,239 @@
+---
+layout: page
+title: "Portfolio"
+description: "My Work"
+header-img: "img/post-bg-06.jpg"
+---
+
+<style>
+.portfolio-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: #777;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-button:hover {
+    color: #333;
+}
+
+.tab-button.active {
+    color: #337ab7;
+    border-bottom-color: #337ab7;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.portfolio-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.portfolio-content {
+    padding: 20px;
+}
+
+.portfolio-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.portfolio-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.portfolio-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.portfolio-tag {
+    background: #f8f9fa;
+    color: #495057;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.category-content {
+    display: none;
+}
+
+.category-content.active {
+    display: block;
+}
+</style>
+
+<!-- Category Tabs -->
+<div class="portfolio-tabs">
+    <button class="tab-button active" onclick="showCategory('all')">All Work</button>
+    <button class="tab-button" onclick="showCategory('ux')">UX Design</button>
+    <button class="tab-button" onclick="showCategory('games')">Games</button>
+    <button class="tab-button" onclick="showCategory('concept-art')">Concept Art</button>
+</div>
+
+<!-- All Work -->
+<div id="all" class="category-content active">
+    <div class="portfolio-grid">
+        <!-- UX Projects will show here -->
+        <div class="portfolio-item" data-category="ux">
+            <img src="img/portfolio/ux-project-1.jpg" alt="UX Project 1">
+            <div class="portfolio-content">
+                <h3 class="portfolio-title">Mobile App Redesign</h3>
+                <p class="portfolio-description">Complete redesign of a mobile banking app focusing on user experience and accessibility.</p>
+                <div class="portfolio-tags">
+                    <span class="portfolio-tag">UX/UI</span>
+                    <span class="portfolio-tag">Mobile</span>
+                    <span class="portfolio-tag">Figma</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Projects will show here -->
+        <div class="portfolio-item" data-category="games">
+            <img src="img/portfolio/game-project-1.jpg" alt="Game Project 1">
+            <div class="portfolio-content">
+                <h3 class="portfolio-title">Fantasy RPG Interface</h3>
+                <p class="portfolio-description">UI design for a fantasy role-playing game including inventory, character stats, and quest systems.</p>
+                <div class="portfolio-tags">
+                    <span class="portfolio-tag">Game UI</span>
+                    <span class="portfolio-tag">Fantasy</span>
+                    <span class="portfolio-tag">Unity</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Concept Art will show here -->
+        <div class="portfolio-item" data-category="concept-art">
+            <img src="img/portfolio/concept-art-1.jpg" alt="Concept Art 1">
+            <div class="portfolio-content">
+                <h3 class="portfolio-title">Sci-Fi Environment Design</h3>
+                <p class="portfolio-description">Concept art for futuristic cityscape used in an indie game project.</p>
+                <div class="portfolio-tags">
+                    <span class="portfolio-tag">Concept Art</span>
+                    <span class="portfolio-tag">Sci-Fi</span>
+                    <span class="portfolio-tag">Digital Art</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more portfolio items here -->
+    </div>
+</div>
+
+<!-- UX Only -->
+<div id="ux" class="category-content">
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <img src="img/portfolio/ux-project-1.jpg" alt="UX Project 1">
+            <div class="portfolio-content">
+                <h3 class="portfolio-title">Mobile App Redesign</h3>
+                <p class="portfolio-description">Complete redesign of a mobile banking app focusing on user experience and accessibility.</p>
+                <div class="portfolio-tags">
+                    <span class="portfolio-tag">UX/UI</span>
+                    <span class="portfolio-tag">Mobile</span>
+                    <span class="portfolio-tag">Figma</span>
+                </div>
+            </div>
+        </div>
+        <!-- Add more UX projects here -->
+    </div>
+</div>
+
+<!-- Games Only -->
+<div id="games" class="category-content">
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <img src="img/portfolio/game-project-1.jpg" alt="Game Project 1">
+            <div class="portfolio-content">
+                <h3 class="portfolio-title">Fantasy RPG Interface</h3>
+                <p class="portfolio-description">UI design for a fantasy role-playing game including inventory, character stats, and quest systems.</p>
+                <div class="portfolio-tags">
+                    <span class="portfolio-tag">Game UI</span>
+                    <span class="portfolio-tag">Fantasy</span>
+                    <span class="portfolio-tag">Unity</span>
+                </div>
+            </div>
+        </div>
+        <!-- Add more game projects here -->
+    </div>
+</div>
+
+<!-- Concept Art Only -->
+<div id="concept-art" class="category-content">
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <img src="img/portfolio/concept-art-1.jpg" alt="Concept Art 1">
+            <div class="portfolio-content">
+                <h3 class="portfolio-title">Sci-Fi Environment Design</h3>
+                <p class="portfolio-description">Concept art for futuristic cityscape used in an indie game project.</p>
+                <div class="portfolio-tags">
+                    <span class="portfolio-tag">Concept Art</span>
+                    <span class="portfolio-tag">Sci-Fi</span>
+                    <span class="portfolio-tag">Digital Art</span>
+                </div>
+            </div>
+        </div>
+        <!-- Add more concept art here -->
+    </div>
+</div>
+
+<script>
+function showCategory(category) {
+    // Hide all category content
+    const contents = document.querySelectorAll('.category-content');
+    contents.forEach(content => {
+        content.classList.remove('active');
+    });
+    
+    // Remove active class from all buttons
+    const buttons = document.querySelectorAll('.tab-button');
+    buttons.forEach(button => {
+        button.classList.remove('active');
+    });
+    
+    // Show selected category
+    document.getElementById(category).classList.add('active');
+    
+    // Add active class to clicked button
+    event.target.classList.add('active');
+}
+</script>
