@@ -78,8 +78,6 @@ nav:
     url: "/"
   - title: "About"
     url: "/about/"
-  - title: "Portfolio"
-    url: "/portfolio/"
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.

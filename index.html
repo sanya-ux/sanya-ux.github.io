@@ -3,33 +3,123 @@ layout: page
 description: " Designer & Illustrator "
 ---
 
+<style>
+.portfolio-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.portfolio-tab {
+    background: none;
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #666;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.portfolio-tab.active,
+.portfolio-tab:hover {
+    color: #337ab7;
+    border-bottom: 2px solid #337ab7;
+}
+
+.portfolio-content {
+    min-height: 400px;
+}
+
+.project-item {
+    display: none;
+}
+
+.project-item.active {
+    display: block;
+}
+</style>
+
 <div class="portfolio-section">
-    <div class="post-preview">
-        <h2 class="post-title">Mobile Banking App Redesign</h2>
-        <h3 class="post-subtitle">UX/UI Design</h3>
-        <div class="post-content-preview">
-            Complete redesign of a mobile banking app focusing on user experience and accessibility. Improved user flow, enhanced security features, and modern interface design that makes banking intuitive and secure.
-        </div>
-        <p class="post-meta">Design • UX Research • Prototyping</p>
+    <!-- Portfolio Filter Tabs -->
+    <div class="portfolio-tabs">
+        <button class="portfolio-tab active" onclick="filterProjects('all')">All</button>
+        <button class="portfolio-tab" onclick="filterProjects('ux')">UX Work</button>
+        <button class="portfolio-tab" onclick="filterProjects('game')">Game Design</button>
+        <button class="portfolio-tab" onclick="filterProjects('concept')">Concept Art</button>
     </div>
-    <hr>
-    
-    <div class="post-preview">
-        <h2 class="post-title">Fantasy RPG Game UI</h2>
-        <h3 class="post-subtitle">Game Interface Design</h3>
-        <div class="post-content-preview">
-            UI design for a fantasy role-playing game including inventory, character stats, and quest systems. Created immersive interface that enhances gameplay experience while maintaining fantasy aesthetics.
+
+    <!-- Portfolio Content -->
+    <div class="portfolio-content">
+        <div class="post-preview project-item active" data-category="ux">
+            <h2 class="post-title">Mobile Banking App Redesign</h2>
+            <h3 class="post-subtitle">UX/UI Design</h3>
+            <div class="post-content-preview">
+                Complete redesign of a mobile banking app focusing on user experience and accessibility. Improved user flow, enhanced security features, and modern interface design that makes banking intuitive and secure.
+            </div>
+            <p class="post-meta">UX Research • UI Design • Prototyping</p>
         </div>
-        <p class="post-meta">Game Design • UI/UX • Visual Design</p>
-    </div>
-    <hr>
-    
-    <div class="post-preview">
-        <h2 class="post-title">Futuristic Cityscape Concept</h2>
-        <h3 class="post-subtitle">Concept Art</h3>
-        <div class="post-content-preview">
-            Concept art for futuristic cityscape used in an indie game project. Environmental design focusing on atmospheric lighting and architectural details that create an immersive sci-fi world.
+        <hr class="project-item active" data-category="ux">
+        
+        <div class="post-preview project-item active" data-category="game">
+            <h2 class="post-title">Fantasy RPG Game UI</h2>
+            <h3 class="post-subtitle">Game Interface Design</h3>
+            <div class="post-content-preview">
+                UI design for a fantasy role-playing game including inventory, character stats, and quest systems. Created immersive interface that enhances gameplay experience while maintaining fantasy aesthetics.
+            </div>
+            <p class="post-meta">Game Design • UI/UX • Visual Design</p>
         </div>
-        <p class="post-meta">Concept Art • Environment Design • Digital Art</p>
+        <hr class="project-item active" data-category="game">
+        
+        <div class="post-preview project-item active" data-category="concept">
+            <h2 class="post-title">Futuristic Cityscape Concept</h2>
+            <h3 class="post-subtitle">Concept Art</h3>
+            <div class="post-content-preview">
+                Concept art for futuristic cityscape used in an indie game project. Environmental design focusing on atmospheric lighting and architectural details that create an immersive sci-fi world.
+            </div>
+            <p class="post-meta">Concept Art • Environment Design • Digital Art</p>
+        </div>
+        <hr class="project-item active" data-category="concept">
+
+        <!-- Add more projects as needed -->
+        <div class="post-preview project-item active" data-category="ux">
+            <h2 class="post-title">E-commerce Website Redesign</h2>
+            <h3 class="post-subtitle">UX/UI Design</h3>
+            <div class="post-content-preview">
+                Complete overhaul of an e-commerce platform focusing on conversion optimization and user journey improvement. Increased checkout completion by 35% through streamlined design.
+            </div>
+            <p class="post-meta">UX Research • A/B Testing • Conversion Optimization</p>
+        </div>
+        <hr class="project-item active" data-category="ux">
     </div>
 </div>
+
+<script>
+function filterProjects(category) {
+    // Remove active class from all tabs
+    const tabs = document.querySelectorAll('.portfolio-tab');
+    tabs.forEach(tab => tab.classList.remove('active'));
+    
+    // Add active class to clicked tab
+    event.target.classList.add('active');
+    
+    // Hide all project items
+    const projects = document.querySelectorAll('.project-item');
+    projects.forEach(project => {
+        project.classList.remove('active');
+    });
+    
+    // Show projects based on category
+    if (category === 'all') {
+        projects.forEach(project => {
+            project.classList.add('active');
+        });
+    } else {
+        const filteredProjects = document.querySelectorAll(`[data-category="${category}"]`);
+        filteredProjects.forEach(project => {
+            project.classList.add('active');
+        });
+    }
+}
+</script>
