@@ -1,0 +1,19 @@
+/* Custom Styles for Portfolio Filter */
+#portfolioFilters .nav-pills > li > a {
+    font-size: 24px;
+    padding: 12px 20px;
+    margin: 5px 8px;
+    border-radius: 4px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+#portfolioFilters .nav-pills > li > a:hover {
+    background-color: #f0f0f0; /* Light hover effect */
+}
+
+#portfolioFilters .nav-pills > li.active > a {
+    font-weight: 600;
+    background-color: #0085a1; /* Active button color */
+    color: white; /* White text for active button */
+    transform: scale(1.05); /* Slight enlargement */
+}
