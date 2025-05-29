@@ -7,25 +7,33 @@ description: " Designer & Illustrator "
 .portfolio-tabs {
     display: flex;
     justify-content: center;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid #ddd;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid #eee;
+    flex-wrap: wrap;
 }
 
 .portfolio-tab {
     background: none;
     border: none;
-    padding: 1rem 2rem;
+    padding: 1.2rem 2.5rem;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
     color: #666;
-    transition: color 0.3s, border-bottom 0.3s;
-    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+    margin: 0 0.5rem;
 }
 
-.portfolio-tab.active,
+.portfolio-tab.active {
+    color: #337ab7;
+    border-bottom: 3px solid #337ab7;
+    background-color: rgba(51, 122, 183, 0.05);
+}
+
 .portfolio-tab:hover {
     color: #337ab7;
-    border-bottom: 2px solid #337ab7;
+    background-color: rgba(51, 122, 183, 0.05);
 }
 
 .portfolio-content {
@@ -34,10 +42,29 @@ description: " Designer & Illustrator "
 
 .project-item {
     display: none;
+    animation: fadeIn 0.5s ease-in;
 }
 
 .project-item.active {
     display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .portfolio-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .portfolio-tab {
+        margin: 0.2rem 0;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
 }
 </style>
 
@@ -102,7 +129,12 @@ function filterProjects(category) {
     tabs.forEach(tab => tab.classList.remove('active'));
     
     // Add active class to clicked tab
-    event.target.classList.add('active');
+    const clickedTab = Array.from(tabs).find(tab => 
+        tab.textContent.toLowerCase().includes(category === 'all' ? 'all' : 
+        category === 'ux' ? 'ux' : 
+        category === 'game' ? 'game' : 'concept')
+    );
+    if (clickedTab) clickedTab.classList.add('active');
     
     // Hide all project items
     const projects = document.querySelectorAll('.project-item');
@@ -111,15 +143,23 @@ function filterProjects(category) {
     });
     
     // Show projects based on category
-    if (category === 'all') {
-        projects.forEach(project => {
-            project.classList.add('active');
-        });
-    } else {
-        const filteredProjects = document.querySelectorAll(`[data-category="${category}"]`);
-        filteredProjects.forEach(project => {
-            project.classList.add('active');
-        });
-    }
+    setTimeout(() => {
+        if (category === 'all') {
+            projects.forEach(project => {
+                project.classList.add('active');
+            });
+        } else {
+            const filteredProjects = document.querySelectorAll(`[data-category="${category}"]`);
+            filteredProjects.forEach(project => {
+                project.classList.add('active');
+            });
+        }
+    }, 50);
 }
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Make sure "All" tab is active and all projects are shown
+    filterProjects('all');
+});
 </script>
