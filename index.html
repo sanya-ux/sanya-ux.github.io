@@ -1,46 +1,35 @@
 ---
 layout: page
-description: "「离开世界之前 一切都是过程」"
+description: " Designer & Illustrator "
 ---
 
-{% for post in paginator.posts %}
-<div class="post-preview">
-    <a href="{{ post.url | prepend: site.baseurl }}">
-        <h2 class="post-title">
-            {{ post.title }}
-        </h2>
-        {% if post.subtitle %}
-        <h3 class="post-subtitle">
-            {{ post.subtitle }}
-        </h3>
-        {% endif %}
+<div class="portfolio-section">
+    <div class="post-preview">
+        <h2 class="post-title">Mobile Banking App Redesign</h2>
+        <h3 class="post-subtitle">UX/UI Design</h3>
         <div class="post-content-preview">
-            {% if post.lang == 'en' %}
-                {{ post.content | strip_html | truncate:300 }}
-            {% else %}
-                {{ post.content | strip_html | truncate:200 }}
-            {% endif %}
+            Complete redesign of a mobile banking app focusing on user experience and accessibility. Improved user flow, enhanced security features, and modern interface design that makes banking intuitive and secure.
         </div>
-    </a>
-    <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
-    </p>
+        <p class="post-meta">Design • UX Research • Prototyping</p>
+    </div>
+    <hr>
+    
+    <div class="post-preview">
+        <h2 class="post-title">Fantasy RPG Game UI</h2>
+        <h3 class="post-subtitle">Game Interface Design</h3>
+        <div class="post-content-preview">
+            UI design for a fantasy role-playing game including inventory, character stats, and quest systems. Created immersive interface that enhances gameplay experience while maintaining fantasy aesthetics.
+        </div>
+        <p class="post-meta">Game Design • UI/UX • Visual Design</p>
+    </div>
+    <hr>
+    
+    <div class="post-preview">
+        <h2 class="post-title">Futuristic Cityscape Concept</h2>
+        <h3 class="post-subtitle">Concept Art</h3>
+        <div class="post-content-preview">
+            Concept art for futuristic cityscape used in an indie game project. Environmental design focusing on atmospheric lighting and architectural details that create an immersive sci-fi world.
+        </div>
+        <p class="post-meta">Concept Art • Environment Design • Digital Art</p>
+    </div>
 </div>
-<hr>
-{% endfor %}
-
-<!-- Pager -->
-{% if paginator.total_pages > 1 %}
-<ul class="pager">
-    {% if paginator.previous_page %}
-    <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
-    </li>
-    {% endif %}
-    {% if paginator.next_page %}
-    <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
-    </li>
-    {% endif %}
-</ul>
-{% endif %}
