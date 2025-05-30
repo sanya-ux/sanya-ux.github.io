@@ -28,7 +28,7 @@ function init() {
     // Load 3D model (replace with your model path)
     const loader = new THREE.GLTFLoader();
     loader.load(
-        '/assets/models/your-model.gltf', // Path to your 3D model
+        '/assets/models/pointy_v1.gltf', // Path to your 3D model
         (gltf) => {
             model = gltf.scene;
             scene.add(model);

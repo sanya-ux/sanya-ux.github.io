@@ -23,7 +23,9 @@
 <!-- jQuery -->
 <script src="{{ "/js/jquery.min.js " | prepend: site.baseurl }}"></script>
 
+{% if page.url == "/" or page.url == "/index.html" %}
 <script src="{{ '/assets/js/3d-header.js' | relative_url }}"></script>
+{% endif %}
 
 <!-- Bootstrap Core JavaScript -->
 <!-- Currently, only navbar scroll-down effect at desktop still depends on this -->
