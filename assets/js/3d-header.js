@@ -6,7 +6,7 @@ function init() {
     
     // Create scene
     scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xf0f0f0); // Match your theme
+    scene.background = new THREE.Color(0x00000000); // Transparent background
     
     // Set up camera
     camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
@@ -28,7 +28,7 @@ function init() {
     // Load 3D model (replace with your model path)
     const loader = new THREE.GLTFLoader();
     loader.load(
-        '/assets/models/pointy_v1.gltf', // Path to your 3D model
+        './assets/models/pointy_v1.glb', // Updated path to your 3D model (relative)
         (gltf) => {
             model = gltf.scene;
             scene.add(model);

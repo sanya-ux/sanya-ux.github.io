@@ -1,27 +1,17 @@
 <header class="intro-header">
     {% if page.url == '/' %}
-        <!-- 3D Model Container for Homepage -->
+        <!-- Homepage: 3D Container -->
         <div id="header-3d-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></div>
     {% else %}
-        <!-- Header Image for Other Pages -->
-        <div style="
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            background-image: url('{{ page.header-img | relative_url }}'); 
-            background-size: cover; 
-            background-position: center; 
-            z-index: -1;
-        "></div>
+        <!-- Other Pages: Header Image -->
+        <div class="header-image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('{{ site.baseurl }}/{{ page.header-img }}'); background-size: cover; background-position: center; z-index: -1;"></div>
     {% endif %}
     
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading">
-                    <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                    <h1>{{ page.title | default: site.title }}</h1>
                     <span class="subheading">{{ page.description }}</span>
                 </div>
             </div>

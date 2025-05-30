@@ -1,48 +1,56 @@
 ---
 layout: page
 title: "About"
-description: " Game Design | UI/UX Design | Concept Art | Illustration "
+description: "Game Design | UI/UX Design | Concept Art | Illustration"
 header-img: "img/cover.png"
-header-mask: 0.3
-multilingual: true
 ---
 
-{% include multilingual-sel.html %}
+<!-- English Version Only -->
+<div class="post-container">
+    <h2>About Me</h2>
 
-<!-- Chinese Version -->
-<div class="zh post-container">
-    {% capture about_zh %}{% include about/zh.md %}{% endcapture %}
-    {{ about_zh | markdownify }}
+    <p>Hi, I’m Sanya.</p>
+
+    <p>I work at the crossroads of art, design, and technology—crafting experiences that are as engaging as they are imaginative. From Indian myth-inspired game concepts to character art rich with narrative depth, I bring stories to life through bold visuals and thoughtful design.</p>
+
+    <p>My professional experience includes leading the creative direction and game design for <strong>Roop Ro Rajasthan, a narrative-driven virtual reality game;</strong> overseeing character conceptualization and creative direction for an upcoming multiplayer mobile title; and independently producing all graphic design deliverables for a TEDx event.</p>
+
+    <p>Additionally, I have contributed to book illustrations, designed cover art for music releases, co-organized an art market during a campus event at IIT Jodhpur, and volunteered with the social media team at the School of Design, IIT Jodhpur.</p>
+
+    <h3>Education</h3>
+
+    <ul>
+        <li><strong>Master of Design (M.Des) in XR Design</strong>, 2023<br>School of Design, IIT Jodhpur<br>Focus: Extended Reality (XR), immersive media, interactive experiences</li>
+        <li><strong>Bachelor of Fine Arts (BFA)</strong>, Applied art dept., 2019<br>College of Art, University of Delhi<br>Focus: Commercial Art and Advertising</li>
+    </ul>
+
+    <h3>My skill set spans multiple domains</h3>
+
+    <ul>
+        <li>Game Design – Narrative design, level design, and gameplay mechanics</li>
+        <li>UI/UX Design – User-centered interfaces and interactive experiences</li>
+        <li>3D Asset Creation – Modeling, texturing, and environment design</li>
+        <li>Concept Art & Illustration – Character design, world-building, and visual storytelling</li>
+        <li>Graphic Design – Branding, posters, and digital assets</li>
+        <li>Animation – 2D/3D animation for games and media</li>
+        <li>Vibe Coding</li>
+    </ul>
+
+    <h3>Software Proficiency</h3>
+
+    <img src="/img/sfp.png" alt="SFP">
+
+    <h3>Skills</h3>
+    <ul>
+        <li>Game Design & Development</li>
+        <li>User Interface & User Experience Design</li>
+        <li>Concept Art & Character Design</li>
+        <li>Digital Illustration</li>
+    </ul>
+    
+    <h3>Featured Projects</h3>
+    <p>Details about your featured projects will go here...</p>
+    
+    <h3>Education & Experience</h3>
+    <p>Your educational background and professional experience...</p>
 </div>
-
-<!-- English Version -->
-<div class="en post-container">
-    {% capture about_en %}{% include about/en.md %}{% endcapture %}
-    {{ about_en | markdownify }}
-</div>
-
-
-{% if site.disqus_username %}
-<!-- disqus 评论框 start -->
-<div class="comment">
-    <div id="disqus_thread" class="disqus-thread">
-
-    </div>
-</div>
-<!-- disqus 评论框 end -->
-
-<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    var disqus_shortname = "{{site.disqus_username}}";
-    var disqus_identifier = "{{site.disqus_username}}/{{page.url}}";
-    var disqus_url = "{{site.url}}{{page.url}}";
-
-    (function () {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<!-- disqus 公共JS代码 end -->
-{% endif %}
