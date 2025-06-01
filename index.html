@@ -106,21 +106,24 @@
         .divider {
             background-color: #000;
             width: 2px;
-            height: 700px;
+            height: 500px; /* Adjusted height to better fit content */
             justify-self: center;
         }
 
         /* About Section */
         .about-card {
-            background-color: #e8f4f8;
-            border: 2px solid #000;
-            border-radius: 1px;
-            padding: 2.5rem;
+            background-image: url('/img/blue-card.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: none;
+            border-radius: 0;
+            padding: 3rem 3.5rem 3rem 3rem;
             font-size: 1.1rem;
             line-height: 1.7;
             color: #333;
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
         }
 
         .about-card:hover {
@@ -157,33 +160,64 @@
         }
 
         .blog-card {
-            background-color: #e8e8f0;
-            border: 2px solid #000;
-            border-radius: 1px;
-            padding: 1.5rem;
+            background-image: url('/img/purple-card.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: none;
+            padding: 1.5rem 2rem;
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            transition: transform 0.3s ease;
+            font-size: 0.95rem;
+            color: #333;
+            border-bottom: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            border-radius: 0;
         }
 
         .blog-card:hover {
             transform: translateX(8px) translateY(-4px);
-            box-shadow: -8px 8px 0px #000;
+            box-shadow: none;
         }
 
         .blog-card h4 {
             font-family: 'Sora', sans-serif;
-            font-size: 1rem;
-            font-weight: 400;
-            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            font-weight: 700;
             color: #000;
-            line-height: 1.3;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .blog-card h4 .location {
+            font-weight: 400;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .blog-card .subtitle {
+            font-family: 'Sora', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 300;
+            color: #666;
+            margin: 0;
         }
 
         .blog-card .date {
             font-size: 0.9rem;
             color: #666;
             font-weight: 400;
+            margin: 0;
         }
+
+        .blog-card::after {
+            content: none;
+        }
+
 
         /* Projects Section */
         .projects-section {
@@ -195,37 +229,44 @@
         .category-tabs {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin-bottom: 4rem;
-            padding: 1rem 0;
-            border-bottom: 2px solid #000;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #ccc;
         }
 
         .category-tab {
             font-family: 'Sora', sans-serif;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 400;
-            color: #666;
+            color: #000;
             text-decoration: none;
-            padding: 0.8rem 1.5rem;
+            padding: 0 2rem;
             border: none;
-            background: #E8F0FE;
+            background: transparent;
             cursor: pointer;
-            transition: all 0.3s ease;
-            border-radius: 25px;
             position: relative;
         }
 
+        .category-tab:not(:last-child)::after {
+            content: "|";
+            color: #999;
+            margin-left: 1rem;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
         .category-tab.active {
+            font-weight: 800;
+            border-bottom: 2px solid #000;
             color: #000;
-            font-weight: 500;
-            background: #4A90E2;
-            color: #fff;
         }
 
         .category-tab:hover:not(.active) {
-            color: #333;
-            background: #D1E7DD;
+            color: #555;
+            background: transparent;
         }
 
         .projects-grid {
@@ -547,20 +588,20 @@
         <section class="blog-section">
             <h3>Latest Blogs</h3>
             <div class="blog-list">
-                <article class="blog-card" onclick="openBlog('roop-ro-rajathan')">
-                    <h4>Roop Ro Rajathan- Game Design Doc</h4>
-                    <div class="date">1 June 2025</div>
-                </article>
+            <article class="blog-card" onclick="openBlog('roop-ro-rajathan')">
+                <h4>Roop Ro Rajathan- Game Design Doc</h4>
+                <div class="date">1 June 2025</div>
+            </article>
 
-                <article class="blog-card" onclick="openBlog('art-market-iit')">
-                    <h4>Art Market organised at IIT Jodhpur Campus event</h4>
-                    <div class="date">30 August 2023</div>
-                </article>
+            <article class="blog-card" onclick="openBlog('art-market-iit')">
+                <h4>Art Market organised at IIT Jodhpur Campus event</h4>
+                <div class="date">30 August 2023</div>
+            </article>
 
-                <article class="blog-card" onclick="openBlog('design-degree-show')">
-                    <h4>Design Degree Show Visit at IIT Delhi</h4>
-                    <div class="date">30 May 2025</div>
-                </article>
+            <article class="blog-card" onclick="openBlog('design-degree-show')">
+                <h4>Design Degree Show Visit at IIT Delhi</h4>
+                <div class="date">30 May 2025</div>
+            </article>
             </div>
         </section>
     </main>

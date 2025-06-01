@@ -17,6 +17,3 @@ Open the `index.html` file in a web browser to view the website locally.
 
 This project is intended to be deployed on GitHub Pages using the repository `sanya-ux.github.io`.
 
-## License
-
-This project is open source and free to use.
